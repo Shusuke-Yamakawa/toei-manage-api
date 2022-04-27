@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/toei_court
+    username: root
+    password: password
+#  cloud:
+#    gcp:
+#      sql:
+#        database-name: mobile_expay
+#        instance-connection-name: mobileexpay-staging:us-east1:mobileexpay-db1
+# ????
+logging:
+  path: ./
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: INFO
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+#server:
+#  port: 8092
